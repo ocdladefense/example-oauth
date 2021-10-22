@@ -1,10 +1,5 @@
 <?php
 
-define("BASE_PATH", __DIR__);
-
-require BASE_PATH . "vendor/autoload.php";
-include BASE_PATH . "config/config.php";
-
 use Salesforce\OAuthConfig;
 use Salesforce\OAuth;
 use Salesforce\OAuthRequest;

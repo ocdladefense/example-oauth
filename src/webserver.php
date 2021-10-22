@@ -2,9 +2,6 @@
 
 session_start();
 
-require "../vendor/autoload.php";
-include "../config/config.php";
-
 use Salesforce\OAuthConfig;
 use Salesforce\OAuth;
 use Salesforce\OAuthRequest;
@@ -15,7 +12,6 @@ if(isDoingWebserverFlow()){
     $_SESSION["authorized"] = True;
 
     $config = new OAuthConfig($oauth_config);
-    $array = getAccessToken($config);
 
     session_write_close();
 
