@@ -16,10 +16,10 @@ $oauth_config = array(
                 "security_token" => ""
             ),
             "webserver" => array(
-                "token_url" => "",
-                "auth_url" => "",
-                "redirect_url" => "",
-                "callback_url" => ""
+                "token_url" => "https://ocdpartial-ocdla.cs217.force.com/services/oauth2/token",
+                "auth_url" => "https://ocdpartial-ocdla.cs217.force.com/services/oauth2/authorize",
+                "redirect_url" => "https://localhost/oauth/webserver",
+                "callback_url" => "https://localhost/jobs"
             )
         )
     )

@@ -6,17 +6,11 @@ use Salesforce\OAuthConfig;
 use Salesforce\OAuth;
 use Salesforce\OAuthRequest;
 
+error_reporting(E_ALL & ~E_NOTICE);
 
-if(isDoingWebserverFlow()){
+require BASE_PATH . "/vendor/autoload.php";
+include BASE_PATH . "/config/config.php";
 
-    $_SESSION["authorized"] = True;
-
-    $config = new OAuthConfig($oauth_config);
-
-    session_write_close();
-
-    header("Location: " . $_SESSION["redirect"]);
-}
 
 
 function requireAuth($name = "default"){
@@ -38,12 +32,12 @@ function requireAuth($name = "default"){
     }
 }
 
-
 // Normally we determine whether the user has logged in by checking the session.
-function isDoingWebserverFlow(){
+function identityProviderCredentialsAccepted(){
 
     return !empty($_GET["code"]);
 }
+
 
 function userIsAuthorized(){
 

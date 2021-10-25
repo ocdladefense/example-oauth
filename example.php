@@ -2,13 +2,8 @@
 
 define("BASE_PATH", __DIR__);
 
-require BASE_PATH . "/vendor/autoload.php";
-require BASE_PATH . "/src/webserver.php";
-//require BASE_PATH . "/src/userpass.php";
-include BASE_PATH . "/config/config.php";
+require BASE_PATH . "/src/functions.php";
 
-
-// Testing the webserver flow authorization flow.
 
 requireAuth();
 
